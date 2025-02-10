@@ -137,6 +137,20 @@ function bindPrefEvents() {
         `Please restart Zotero for your new OPENAI Model to take effect.`,
       )
     })
+    
+    //MY ADDITION STARTS
+    addon.data
+    .prefs!!.window.document.querySelector(
+      `#zotero-prefpane-${config.addonRef}-DEEPSEEK_MODEL-R1`,
+    )
+    ?.addEventListener("command", (e) => {
+      addon.data.prefs!.window.alert(
+        `Please restart Zotero for your new DEEPSEEK Model to take effect.`,
+      )
+    })
+    //MY ADDITION ENDS
+
+
   addon.data
     .prefs!!.window.document.querySelector(
       `#zotero-prefpane-${config.addonRef}-OPENAI_BASE_URL`,
